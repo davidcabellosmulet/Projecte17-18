@@ -69,8 +69,10 @@ public class ProjecteMotoGp {
             case 2:
                 modificarPilot();
                 break;
+            //3. Esborrarem el pilot
             case 3:
-             
+                borrarPilot();
+                break;
             
     }
 
@@ -87,6 +89,11 @@ public class ProjecteMotoGp {
 
     }
     public static void modificarPilot(){
+
+
+
+    }
+    public static void borrarPilot(){
 
 
 

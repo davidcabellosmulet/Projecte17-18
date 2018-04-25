@@ -12,7 +12,7 @@ package projectemotogp;
  * @author David
  */
 public class Pilot {
-
+    //
     public enum Categoria {MOTOGP, MOTO2, MOTO3};
     public Categoria Pilot;
     public String nom;
