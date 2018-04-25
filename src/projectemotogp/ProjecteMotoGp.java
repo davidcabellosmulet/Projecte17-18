@@ -11,6 +11,7 @@ import java.util.Scanner;
  *
  * @author David
  */
+// anem fent
 public class ProjecteMotoGp {
     //Numero de caselles maxim de l'array
     private static final int MAX_PILOTS = 10;
