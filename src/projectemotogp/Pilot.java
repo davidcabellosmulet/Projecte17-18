@@ -13,14 +13,27 @@ package projectemotogp;
  */
 public class Pilot {
 
-    public Categoria[] getPilot() {
+    public enum Categoria {MOTOGP, MOTO2, MOTO3};
+    public Categoria Pilot;
+    public String nom;
+    public String cognom;
+    public int dorsal;
+    public String equip;
+    public boolean residencia;
+    public double dataNaixement;
+    public String apodo;
+    public int estatura;
+    public int omplit;
+
+    
+    public Categoria getPilot() {
         return Pilot;
     }
 
-    public void setPilot(Categoria[] Pilot) {
+    public void setPilot(Categoria Pilot) {
         this.Pilot = Pilot;
     }
-
+    
     public String getNom() {
         return nom;
     }
@@ -84,18 +97,16 @@ public class Pilot {
     public void setEstatura(int estatura) {
         this.estatura = estatura;
     }
- 
-  
-    public enum Categoria {MOTOGP, MOTO2, MOTO3,};
-    Categoria[] Pilot = Categoria.values();
-    String nom;
-    String cognom;
-    int dorsal;
-    String equip;
-    boolean residencia;
-    double dataNaixement;
-    String apodo;
-    int estatura;
     
-    
+    public int getOmplit() {
+        return omplit;
+    }
+
+    public void setOmplit(int omplit) {
+        this.omplit = omplit;
+    }
+
+    void setOmplit(boolean b) {
+         
+    }    
 }
