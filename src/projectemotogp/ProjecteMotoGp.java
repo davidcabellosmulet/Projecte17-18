@@ -40,7 +40,7 @@ public class ProjecteMotoGp {
         }
       
     }
-    
+    //prova
     public static void demanarOpcio(){
     Scanner ent = new Scanner(System.in);
         
