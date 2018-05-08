@@ -50,8 +50,7 @@ public class ProjecteMotoGp {
         System.out.println("2. Modificar pilot.");
         System.out.println("3. Borrar pilot.");
         System.out.println("4. Llistar pilots.");
-        System.out.println("5. Llista categories.");
-        System.out.println("6. Recuperar pilot borrat.");
+        System.out.println("5. Recuperar pilot borrat.");
         
         opcio = ent.skip("[\r\n]*").nextInt();
     }
@@ -74,6 +73,15 @@ public class ProjecteMotoGp {
             case 3:
                 borrarPilot();
                 break;
+            //4. Llistarem tots els pilots
+            case 4:
+                llistaPilot();
+                break;
+            //5. Recuperarem pilots borrats
+            case 5:
+                recuperarPilot();
+                break;
+                
             
     }
 
@@ -99,4 +107,15 @@ public class ProjecteMotoGp {
 
 
     }
+    public static void llistaPilot(){
+
+
+
+    }
+    public static void recuperarPilot(){
+
+
+
+    }
+        
 }
