@@ -5,13 +5,16 @@
  */
 package projectemotogp;
 
-//porva
 
 /**
  *
  * @author David
  */
 public class Pilot {
+
+    boolean isOmplit() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public enum Categoria {MOTOGP, MOTO2, MOTO3};
     public Categoria Pilot;
@@ -104,9 +107,10 @@ public class Pilot {
 
     public void setOmplit(int omplit) {
         this.omplit = omplit;
+        
     }
 
     void setOmplit(boolean b) {
-         
+    
     }    
 }

@@ -40,11 +40,11 @@ public class ProjecteMotoGp {
         }
       
     }
-    //prova
+    
     public static void demanarOpcio(){
     Scanner ent = new Scanner(System.in);
         
-        System.out.println("\nMenú de l'aplicació");
+        System.out.println("\nMenú de la base de dades");
         System.out.println("-----------------------");
         System.out.println("1. Introduir pilot.");
         System.out.println("2. Modificar pilot.");
@@ -92,10 +92,24 @@ public class ProjecteMotoGp {
         return opcio == 0;
     
     }
+
     public static void introduirPilot(){
-
-
-
+        Scanner ent = new Scanner(System.in);
+        
+        //Primer Recorrerem l'array fins trobar una casella no omplida o arribar al seu final.
+        
+        int i;
+        for (i = 0; i < array.length && array[i].isOmplit(); i++);
+        //Si no hem arribat al final es perque hem trobat una casella buida (no omplida)
+        if(i < array.length) {
+            System.out.println("\nNom");
+            array[i].setNom(ent.skip("[\r\n}*").nextLine());
+            System.out.println("\nCognom");
+            array[i].setCognom(ent.skip("[\r\n}*").nextLine());
+            System.out.println("\nDorsal");
+            array[i].setDorsal(ent.skip("[\r\n}*").nextInt());
+        }
+      
     }
     public static void modificarPilot(){
 
