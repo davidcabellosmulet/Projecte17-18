@@ -8,7 +8,7 @@ package projectemotogp;
 
 /**
  *
- * @author David
+ * @author David Cabellos Mulet
  */
 public class Pilot {
 
@@ -75,7 +75,7 @@ public class Pilot {
         this.equip = equip;
     }
 
-    public String isResidencia() {
+    public String getResidencia() {
         return residencia;
     }
 
