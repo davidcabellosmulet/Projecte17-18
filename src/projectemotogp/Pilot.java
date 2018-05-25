@@ -12,29 +12,35 @@ package projectemotogp;
  */
 public class Pilot {
 
-    boolean isOmplit() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
     
-    public enum Categoria {MOTOGP, MOTO2, MOTO3};
-    public Categoria Pilot;
+
+    public String Categoria;
     public String nom;
     public String cognom;
     public int dorsal;
     public String equip;
-    public boolean residencia;
-    public double dataNaixement;
+    public String residencia;
     public String apodo;
     public int estatura;
-    public int omplit;
+    public boolean omplit;
+    public boolean Home;
 
-    
-    public Categoria getPilot() {
-        return Pilot;
+    public boolean getHome() {
+        return Home;
     }
 
-    public void setPilot(Categoria Pilot) {
-        this.Pilot = Pilot;
+    public void setHome(boolean Home) {
+        this.Home = Home;
+    }
+    
+    
+    public String getCategoria() {
+        return Categoria;
+    }
+
+    public void setCategoria(String Categoria) {
+        this.Categoria = Categoria;
     }
     
     public String getNom() {
@@ -69,20 +75,12 @@ public class Pilot {
         this.equip = equip;
     }
 
-    public boolean isResidencia() {
+    public String isResidencia() {
         return residencia;
     }
 
-    public void setResidencia(boolean residencia) {
+    public void setResidencia(String residencia) {
         this.residencia = residencia;
-    }
-
-    public double getDataNaixement() {
-        return dataNaixement;
-    }
-
-    public void setDataNaixement(double dataNaixement) {
-        this.dataNaixement = dataNaixement;
     }
 
     public String getApodo() {
@@ -101,16 +99,14 @@ public class Pilot {
         this.estatura = estatura;
     }
     
-    public int getOmplit() {
+    public boolean isOmplit() {
         return omplit;
     }
 
-    public void setOmplit(int omplit) {
+    public void setOmplit(boolean omplit) {
         this.omplit = omplit;
         
     }
 
-    void setOmplit(boolean b) {
-    
-    }    
+     
 }

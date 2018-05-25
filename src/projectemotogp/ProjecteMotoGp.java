@@ -50,17 +50,13 @@ public class ProjecteMotoGp {
         System.out.println("2. Modificar pilot.");
         System.out.println("3. Borrar pilot.");
         System.out.println("4. Llistar pilots.");
-        System.out.println("5. Recuperar pilot borrat.");
+        System.out.println("5. Sortir");
         
         opcio = ent.skip("[\r\n]*").nextInt();
     }
     public static void tractarOpcio(){
     
         switch (opcio) {
-            //0. Per a sortir
-            case 0:
-                System.out.println("Fins un Altra!!");
-                break;
             //1. Introduir un pilot
             case 1:
                 introduirPilot();
@@ -77,10 +73,12 @@ public class ProjecteMotoGp {
             case 4:
                 llistaPilot();
                 break;
-            //5. Recuperarem pilots borrats
+            //5. Per a sortir
             case 5:
-                recuperarPilot();
-                break;
+                System.out.println("Fins un Altra!!");
+                break;  
+            default:
+                System.out.println("\nOpció Incorrecta!");
                 
             
     }
@@ -102,17 +100,37 @@ public class ProjecteMotoGp {
         for (i = 0; i < array.length && array[i].isOmplit(); i++);
         //Si no hem arribat al final es perque hem trobat una casella buida (no omplida)
         if(i < array.length) {
-            System.out.println("\nNom");
-            array[i].setNom(ent.skip("[\r\n}*").nextLine());
-            System.out.println("\nCognom");
-            array[i].setCognom(ent.skip("[\r\n}*").nextLine());
-            System.out.println("\nDorsal");
-            array[i].setDorsal(ent.skip("[\r\n}*").nextInt());
+            System.out.println("\nNom:");
+            array[i].setNom(ent.skip("[\r\n]*").nextLine());
+            System.out.println("\nCognom:");
+            array[i].setCognom(ent.skip("[\r\n]*").nextLine());
+            System.out.println("\nEquip:");
+            array[i].setEquip(ent.skip("[\r\n]*").nextLine());
+            System.out.println("\nResidencia:");
+            array[i].setResidencia(ent.skip("[\r\n]*").nextLine());
+            System.out.println("\nEstatura:");
+            array[i].setEstatura(ent.skip("[\r\n]*").nextInt());
+            System.out.println("\nApodo:");
+            array[i].setApodo(ent.skip("[\r\n]*").nextLine());
+            System.out.println("\nDorsal:");
+            array[i].setDorsal(ent.skip("[\r\n]*").nextInt());
+            System.out.println("\nCategoria:");
+            array[i].setCategoria(ent.skip("[\r\n]*").nextLine());
+            
+            char esHome;
+            do {
+                System.out.println("Es home(H) o dona(D)?:");
+                esHome = ent.skip("[\r\n]*").nextLine().toUpperCase().charAt(0);
+            } while (esHome != 'H' && esHome !='D');
+            array[i].setHome(esHome == 'H');
+            array[i].setOmplit(true);
+        } else {
+            System.out.println("\nNo hi caben mes pilots, si vols ficar mes pilots, esborran algun.1");
         }
       
     }
     public static void modificarPilot(){
-
+        
 
 
     }
@@ -122,11 +140,6 @@ public class ProjecteMotoGp {
 
     }
     public static void llistaPilot(){
-
-
-
-    }
-    public static void recuperarPilot(){
 
 
 
